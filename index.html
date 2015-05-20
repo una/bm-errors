@@ -161,7 +161,7 @@
   dur="0.25s"
   fill="freeze" /> -->
 
-<animate
+<!-- <animate
   xlink:href="#wrong-arm--color"
   id="switch-color"
   attributeName="fill"
@@ -170,27 +170,34 @@
   begin="0s"
   fill="freeze"
   onend="changeColor()"
-  />
+  /> -->
 
-    <script>
 
-    function randomColor() {
-        var letters = '0123456789ABCDEF'.split('');
-        var color = '#';
-        for (var i = 0; i < 6; i++ ) {
-            color += letters[Math.round(Math.random() * 15)];
-        }
-        return color;
-    }
-
-    function changeColor() {
-      document.getElementById("switch-color").setAttribute("to", randomColor())
-    }
-
-    changeColor();
-
-    </script>
 </svg>
+
+<script>
+
+function randomColor() {
+  var letters = '0123456789ABCDEF'.split('');
+  var color = '#';
+  for (var i = 0; i < 6; i++ ) {
+      color += letters[Math.round(Math.random() * 15)];
+  }
+  return color;
+}
+
+function changeColor() {
+  document.getElementById("wrong-arm--color").setAttribute("fill", randomColor());
+}
+
+var changeColorRepeater = function(){
+  changeColor();
+  setInterval(changeColor, 8000);
+};
+
+setTimeout(changeColorRepeater, 4000);
+
+</script>
 
 </body>
 </html>

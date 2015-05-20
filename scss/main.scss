@@ -19,15 +19,18 @@
 
 @keyframes lil-robot {
   0% {
-    transform: translateX(0) skewX(5deg);
+    transform: translateX(0) skewX(3deg);
   }
   30% {
     transform: translateX(200%) skewX(0);
   }
   60% {
-    transform: translateX(0) skewX(-5deg);
+    transform: translateX(0) skewX(-2deg);
   }
-  61% {
+  61.5% {
+    transform: translateX(0) skewX(2deg);
+  }
+  63% {
     transform: translateX(0) skewX(0deg);
   }
   100% {
@@ -37,15 +40,21 @@
 
 @keyframes lil-robot--eye {
   0% {
-    transform: translate(10px 10px);
+    transform: translate(12px, 2px);
   }
   30% {
+    transform: translate(12px, 2px);
+  }
+  35% {
     transform: translate(0);
   }
   60% {
     transform: translate(0);
   }
   61% {
+    transform: translate(0);
+  }
+  90% {
     transform: translate(0);
   }
   100% {
