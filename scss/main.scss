@@ -1,6 +1,6 @@
 #lil-robot {
-  transform-origin: bottom center;
   animation: lil-robot 8s infinite ease-in-out forwards 2s;
+  transform-origin: bottom center;
 }
 
 #lil-robot--eye {
@@ -8,13 +8,18 @@
 }
 
 #big-robot--torso {
-  transform-origin: bottom center;
   animation: big-robot--torso 8s infinite ease-out forwards;
+  transform-origin: bottom center;
 }
 
 #big-robot--head {
-  transform-origin: 50% 80%;
   animation: big-robot--head 8s infinite ease-out forwards;
+  transform-origin: 50% 80%;
+}
+
+#big-robot--arm {
+  animation: big-robot--arm 8s infinite ease-out forwards;
+  transform-origin: top right;
 }
 
 @keyframes lil-robot {
@@ -22,7 +27,7 @@
     transform: translateX(0) skewX(3deg);
   }
   30% {
-    transform: translateX(200%) skewX(0);
+    transform: translateX(800px) skewX(0);
   }
   60% {
     transform: translateX(0) skewX(-2deg);
@@ -103,6 +108,21 @@
     transform: rotate(0);
   }
   100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes big-robot--arm{
+  0% {
+    transform: rotate(0);
+  }
+  1% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20% {
     transform: rotate(0);
   }
 }
